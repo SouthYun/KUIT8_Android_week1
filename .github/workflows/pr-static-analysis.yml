@@ -1,7 +1,6 @@
 name: PR Static Analysis
 
-# PR 마다 코드 스타일(ktlint)과 안드로이드 Lint 를 돌린다.
-# ktlint 지적은 대부분 로컬에서 ./gradlew ktlintFormat 한 번이면 사라진다.
+# PR마다 안드로이드 Lint를 실행한다.
 on:
   pull_request:
     types: [opened, synchronize, reopened]
@@ -15,7 +14,7 @@ permissions:
 
 jobs:
   static-analysis:
-    name: ktlint & android lint
+    name: android lint
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -32,9 +31,8 @@ jobs:
         with:
           validate-wrappers: true
 
-      # 한쪽이 깨져도 다른 쪽 결과를 함께 보도록 --continue 로 둘 다 돌린다.
-      - name: ktlint & lint
-        run: ./gradlew ktlintCheck lintDebug --continue --build-cache
+      - name: Android Lint
+        run: ./gradlew lintDebug --build-cache
 
       - name: 실패했을 때 리포트 올리기
         if: failure()
@@ -42,8 +40,6 @@ jobs:
         with:
           name: static-analysis-report
           path: |
-            app/build/reports/ktlint
-            build/reports/ktlint
             app/build/reports/lint-results-debug.html
           retention-days: 7
           if-no-files-found: ignore

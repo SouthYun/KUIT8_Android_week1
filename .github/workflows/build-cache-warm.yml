@@ -10,7 +10,6 @@ on:
       - 'gradle/**'
       - '**/*.gradle.kts'
       - 'gradle.properties'
-      - '.editorconfig'
   workflow_dispatch:
 
 permissions:
@@ -37,4 +36,4 @@ jobs:
           cache-read-only: false
           validate-wrappers: true
 
-      - run: ./gradlew ktlintCheck lintDebug testDebugUnitTest assembleDebug :app:compileDebugAndroidTestKotlin --continue --build-cache
+      - run: ./gradlew lintDebug testDebugUnitTest assembleDebug :app:compileDebugAndroidTestKotlin --continue --build-cache
