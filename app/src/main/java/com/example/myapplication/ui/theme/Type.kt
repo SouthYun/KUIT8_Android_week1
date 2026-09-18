@@ -68,3 +68,52 @@ val profileActionStyle = TextStyle(
     fontSize = 14.sp,
     lineHeight = 22.sp
 )
+
+val studentBrandStyle = TextStyle(
+    fontFamily = profileFontFamily,
+    fontWeight = FontWeight.Bold,
+    fontSize = 13.sp,
+    lineHeight = 20.sp
+)
+
+val studentSchoolStyle = TextStyle(
+    fontFamily = profileFontFamily,
+    fontWeight = FontWeight.Bold,
+    fontSize = 18.sp,
+    lineHeight = 28.sp
+)
+
+val studentEnglishLabelStyle = TextStyle(
+    fontFamily = profileFontFamily,
+    fontWeight = FontWeight.Normal,
+    fontSize = 10.sp,
+    lineHeight = 16.sp
+)
+
+val studentBodyStyle = TextStyle(
+    fontFamily = profileFontFamily,
+    fontWeight = FontWeight.Normal,
+    fontSize = 14.sp,
+    lineHeight = 22.sp
+)
+
+val studentStatusStyle = TextStyle(
+    fontFamily = profileFontFamily,
+    fontWeight = FontWeight.Bold,
+    fontSize = 12.sp,
+    lineHeight = 20.sp
+)
+
+val studentFieldLabelStyle = TextStyle(
+    fontFamily = profileFontFamily,
+    fontWeight = FontWeight.Normal,
+    fontSize = 12.sp,
+    lineHeight = 22.sp
+)
+
+val studentCaptionStyle = TextStyle(
+    fontFamily = profileFontFamily,
+    fontWeight = FontWeight.Normal,
+    fontSize = 12.sp,
+    lineHeight = 20.sp
+)

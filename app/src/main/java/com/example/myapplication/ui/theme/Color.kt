@@ -19,3 +19,13 @@ val profileMuted = Color(0xFF58667C)
 val profileBorder = Color(0xFFD9E2EF)
 
 val profileWhite = Color(0xFFFFFFFF)
+
+val studentAccent = Color(0xFF328BFF)
+
+val studentHeader = Color(0xFF173767)
+
+val studentOnHeaderMuted = Color(0xFFE7EFFF)
+
+val studentFieldLabel = Color(0xFF7A879A)
+
+val studentNoticeBackground = Color(0xFFE7EFFF)
